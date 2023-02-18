@@ -1,0 +1,91 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    padding: 20px;
+}
+main::-webkit-scrollbar{
+    display: none;
+}
+main > div {
+    display:flex;
+    flex-wrap:wrap;
+}
+main .container{
+    padding: 10px;
+    color: black;
+    font-style: normal;
+    font-weight: 800;
+    border-radius: 25px;
+    width: fit-content;
+    margin-bottom: 20px;
+    display: flex;
+    max-width: 500px;
+    overflow-wrap: anywhere;
+}
+main .bot-msg .container{
+    background: lightpink;
+}
+main .bot-msg{
+    justify-content: start;
+}
+main .user-msg .container{
+    background: lightblue;
+}
+main .user-msg{
+    justify-content: end;
+}
+header, footer {
+    flex: none;
+}
+header {
+    display: flex;
+    justify-content: center;
+    border-bottom: cadetblue 2px solid ;
+}
+footer {
+    border-top: cadetblue 2px solid ;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+footer textarea {
+    resize: none;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-style: normal;
+    font-weight: 800;
+    height: 100%;
+    width: 80%;
+    border: none;
+    outline: none;
+    margin-right: 5%;
+}
+footer textarea::-webkit-scrollbar{
+    display: none;
+}
+footer .btn {
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    background: cadetblue;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    color: white;
+    border: none;
+    transition: all 100ms ease-in-out;
+}
+footer .btn:hover {
+    transform: scale(1.1);
+}
+main {
+    overflow-y: scroll;
+    flex: auto;
+}
