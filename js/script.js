@@ -92,6 +92,7 @@ let messageArray = [
             sendMessage("bot", this.botMessage);
         },
         nextStack() {
+            console.log(messageArray[currentStack].userAnswer)
             messageArray[currentStack].nextStack.call(messageArray[currentStack]);
         }
     },
@@ -115,6 +116,7 @@ function run(){
 
     const textArea = document.getElementById("textarea-msg");
     textArea.addEventListener("keydown", event => event.key === "Enter" ? sendMessage("user", "") : false)
+    textArea.addEventListener("keyup", event => event.key === "Enter" ? document.getElementById("textarea-msg").value = "" : false)
     messageArray[currentStack].showMessage.call(messageArray[currentStack]);
 }
 
@@ -142,6 +144,7 @@ function sendMessage(participant, message) {
     if (participant === "user-msg") {
         messageArray[currentStack].userAnswer = message;
         messageArray[currentStack].nextStack();
+
     }
 }
 
