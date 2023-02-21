@@ -35,7 +35,7 @@ let messageArray = [
         tempStack: null,
         showMessage(userMood) {
             userMood = userMood.toLowerCase();
-            if (userMood === "гарно" || userMood === "добре" || userMood === "чудово") {
+            if (userMood === "гарно" || userMood === "добре" || userMood === "чудово" || userMood === "нормально") {
                 let last = messageArray.length - 1;
                 this.botMessage = "Рада це чути! Що тебе порадувало?";
                 this.tempStack = last;
